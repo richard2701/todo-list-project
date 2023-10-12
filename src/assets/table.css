@@ -1,0 +1,27 @@
+/* Add your CSS styles here */
+.custom.table {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+.custom.table thead th {
+  color: var(--color-text);
+}
+
+.custom.table.is-hoverable tbody tr:not(.is-selected):hover {
+  background-color: var(--color-background-soft);
+  color: var(--color-text);
+}
+.table-container {
+  width: 100%;
+  overflow: scroll;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
