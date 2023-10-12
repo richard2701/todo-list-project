@@ -138,6 +138,11 @@ const addOrEditNote = () => {
     emit('update:editNote', false)
     emit('update:modelValue', false)
     storeTodo.editNote(props.formData)
+    emit('update:formData', {
+      id: '',
+      task: '',
+      priority: ''
+    })
   } else {
     storeTodo.addNote({ ...props.formData, id: Date.now() })
     emit('update:editNote', false)
