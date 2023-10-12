@@ -12,8 +12,35 @@ header {
 .float-button {
   position: fixed;
   right: 0;
-  bottom: 20px;
+  bottom: 50px;
   margin: 20px;
+  z-index: 999;
+  @media (min-width: 768px) {
+    bottom: 20px;
+  }
+}
+.mb-md-2 {
+  margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+.float-button__mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+} 
+
+.float-button__desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 .float-button button {
   display: block;
@@ -35,6 +62,13 @@ header {
   font-weight: 900;
   transition: all 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .float-button button {
+    width: 50px;
+    height: 50px;
+  }
+}
 .float-button button:hover, .float-button button:focus {
   background: linear-gradient(9deg, rgba(2,0,36,1) 0%, rgba(56,9,121,0.8687850140056023) 35%, rgba(0,86,255,0.9108018207282913) 100%);
 }
@@ -47,6 +81,9 @@ header {
   font-weight: 900;
   font-size: 5rem;
   color: black;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .slide-in-bottom {

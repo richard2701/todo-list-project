@@ -52,7 +52,7 @@
             <td>
               <div>
                 <button
-                  class="button is-warning mr-2"
+                  class="button is-warning mr-2 mb-md-2"
                   @click="$emit('edit-note', j)"
                 >Edit</button>
                 <button
