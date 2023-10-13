@@ -118,7 +118,7 @@ const deleteNote = () => {
   modalValue.value = false
   setTimeout(() => {
     aletInfoValue.value = false
-  }, 10000)
+  }, 3000)
 }
 
 
