@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: 16.x
       - run: yarn install
-      - run: yarn build 
+      - run: yarn run build 
       - run: yarn vitest --ci
       - run: yarn cypress run --ci
