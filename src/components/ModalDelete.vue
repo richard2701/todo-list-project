@@ -7,6 +7,7 @@
           <slot />
           <div class="has-text-centered py-4">
             <button
+              data-test="delete"
               class="button is-danger mr-2 delete-note-button"
               @click="$emit('delete-note')"
             >Delete</button>

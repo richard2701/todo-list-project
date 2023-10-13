@@ -57,6 +57,7 @@
                 >Edit</button>
                 <button
                   class="button is-danger"
+                  data-test="delete-note-button"
                   @click="deleteNoteInfo(j)"
                 >Delete</button>
               </div>
@@ -70,7 +71,7 @@
       v-model="modalValue"
       @delete-note="deleteNote"
     >
-      <h2 class="is-size-2 has-text-weight-medium has-text-danger has-text-centered ">
+      <h2 class="is-size-2 has-text-weight-medium has-text-danger has-text-centered">
         Are you sure you want to delete this note?
       </h2>
     </ModalDelete>
@@ -113,11 +114,11 @@ const deleteNoteInfo = (j) => {
 
 const deleteNote = () => {
   storeTodo.deleteNote(noteDelete.value)
-  modalValue.value = false
   aletInfoValue.value = true
+  modalValue.value = false
   setTimeout(() => {
     aletInfoValue.value = false
-  }, 3000)
+  }, 10000)
 }
 
 
